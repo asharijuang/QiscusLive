@@ -40,7 +40,7 @@ class ViewController: UIViewController {
     func goStream(_ sender: Any) {
         //
         let url = self.urlTextField.text
-        client?.buildStream(streamUrl: url!, completionHandler: { (target, error) in
+        client?.buildStream(streamUrl: url!, completion: { (target, error) in
             //
             self.present(target, animated: true, completion: nil)
         })

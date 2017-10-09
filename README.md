@@ -39,19 +39,18 @@ Add to your project Info.plist
 
 Init Qiscus at your application class with your API key
 
-#### `QiscusStreaming.init(this, api_key);`
+#### `QiscusStreaming(withConfig: config)`
 
 Parameters:
-* api_key: String
+* config: String
 
 ```Swift
-public class SampleApplication extends Application {
-    @Override
-    public void onCreate() {
-        super.onCreate();
-        QiscusStreaming.init(this, api_key);
-    }
-}
+import 'QiscusStreaming'
+
+let config      = StreamConfig()
+config.AppId    = "a3d2QkJXQ2M1YTdrTW1PYnVJSmJiUVczTkxmS3BRc05nYnRCOHRGUw=="
+client = QiscusStreaming(withConfig: config)
+
 ```
 
 Above is our demo API key with limited feature. To get your API key with full features, please [contact us](https://www.qiscus.com/contactus).

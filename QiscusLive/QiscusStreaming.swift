@@ -33,9 +33,9 @@ public class QiscusStreaming: NSObject {
      - returns : Callback chat view controller and error if exist
      
      */
-    public func buildStream(streamUrl url: String, completionHandler: @escaping (UIViewController, NSError?) -> Void) {
+    public func buildStream(streamUrl url: String, completion: @escaping (UIViewController, NSError?) -> Void) {
         self.manager.streamView(streamUrl: url) { (target, error) in
-            completionHandler(target, error)
+            completion(target, error)
         }
     }
     
